@@ -1,0 +1,16 @@
+.brand {
+    --brand-width: 80px;
+    --brand-height: 40px;
+    --brand-width-lg: 120px;
+    --brand-height-lg: 60px;
+
+    width: var(--brand-width);
+    height: var(--brand-height);
+    fill: var(--color-primary);
+    &--lg{
+        width: var(--brand-width-lg);
+        height: var(--brand-height-lg);
+    }
+}
+
+

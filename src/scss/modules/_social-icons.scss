@@ -1,0 +1,26 @@
+.icons-bar{
+    display: flex;
+}
+
+.icon {
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 50%;
+    @include transition();
+    > svg {
+        fill: rgba(#000, .54);
+        width: 24px;
+        height: 24px;
+    }
+
+    &--sm{
+        > svg{
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(#000, .2);
+    }
+}

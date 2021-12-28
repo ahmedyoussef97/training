@@ -1,0 +1,10 @@
+{
+    "pagination": {
+        "itemsPerPage": "Items per Page",
+        "of": "of",
+        "next": "Next",
+        "previous": "Previous",
+        "firstPage": "First Page",
+        "lastPage": "Last Page"
+    }
+}

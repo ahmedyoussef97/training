@@ -1,0 +1,18 @@
+.main-header{
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
+    background-color: var(--header-bg);
+}
+.main-header__container{
+    display: flex;
+    align-items: center;
+    @include breakpoint(small){
+        justify-content: space-between;
+    }
+}
+
+.main-header__burger-menu{
+    @include breakpoint(mid){
+        display: none;
+    }
+}

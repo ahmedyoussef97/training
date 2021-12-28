@@ -1,0 +1,76 @@
+﻿.form-container {
+    max-width: 400px;
+    margin: auto;
+}
+.mdc-checkbox-wrapper {
+    margin-left: -11px;
+    margin-right: -11px;
+}
+.form__new-user {
+    margin-#{$start}: auto;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.form-fade {
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation: fadeInUp 2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.form-sep {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    margin: 16px 0;
+    > span {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: calc(50% - 30px);
+        top: calc(50% - 30px);
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+}
+.form-social {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.form-social__btn {
+    width: 80%;
+    border: 0;
+    padding: 7px;
+    cursor: pointer;
+
+    &--google {
+        background-color: #d95232;
+        color: #fff;
+    }
+}
+
+.form {
+  width: 35%;
+  .mat-form-field {
+    display: block;
+  }
+}

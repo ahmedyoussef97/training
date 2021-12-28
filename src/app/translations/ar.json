@@ -1,0 +1,10 @@
+{
+    "pagination": {
+        "itemsPerPage": "عدد العناصر فى الصفحه",
+        "of": "من",
+        "next": "التالي",
+        "previous": "السابق",
+        "firstPage": "الصفحه الاولي",
+        "lastPage": "الصفحه الاخيره"
+    }
+}

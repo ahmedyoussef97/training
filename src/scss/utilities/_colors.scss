@@ -1,0 +1,288 @@
+// Brand 
+.background-primary { background-color: var(--color-primary) !important; }
+.background-secondary { background-color: var(--color-secondary) !important; }
+
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+
+// Background and Text Colors used when IsLight parameter for Badge / Tag / UserInitials is True 
+.background-primary-lightest { background-color: var(--color-neutral-0) !important; }
+.background-secondary-lightest { background-color: var(--color-neutral-0) !important; }
+
+.text-primary-darker { color: var(--color-primary) !important;}
+.text-secondary-darker { color: var(--color-secondary) !important; }
+
+
+// $6.2.2 - Styles - Colors - Extendend 
+.background-red-lightest { background-color: var(--color-red-lightest) !important; }
+.background-red-lighter { background-color: var(--color-red-lighter) !important; }
+.background-red-light { background-color: var(--color-red-light) !important; }
+.background-red { background-color: var(--color-red) !important; }
+.background-red-dark { background-color: var(--color-red-dark) !important; }
+.background-red-darker { background-color: var(--color-red-darker) !important; }
+.background-red-darkest { background-color: var(--color-red-darkest) !important; }
+
+.text-red-lightest { color: var(--color-red-lightest) !important; }
+.text-red-lighter { color: var(--color-red-lighter) !important; }
+.text-red-light { color: var(--color-red-light) !important; }
+.text-red { color: var(--color-red) !important; }
+.text-red-dark { color: var(--color-red-dark) !important; }
+.text-red-darker { color: var(--color-red-darker) !important; }
+.text-red-darkest { color: var(--color-red-darkest) !important; }
+
+.background-pink-lightest { background-color: var(--color-pink-lightest) !important; }
+.background-pink-lighter { background-color: var(--color-pink-lighter) !important; }
+.background-pink-light { background-color: var(--color-pink-light) !important; }
+.background-pink { background-color: var(--color-pink) !important; }
+.background-pink-dark { background-color: var(--color-pink-dark) !important; }
+.background-pink-darker { background-color: var(--color-pink-darker) !important; }
+.background-pink-darkest { background-color: var(--color-pink-darkest) !important; }
+
+.text-pink-lightest { color: var(--color-pink-lightest) !important; }
+.text-pink-lighter { color: var(--color-pink-lighter) !important; }
+.text-pink-light { color: var(--color-pink-light) !important; }
+.text-pink { color: var(--color-pink) !important; }
+.text-pink-dark { color: var(--color-pink-dark) !important; }
+.text-pink-darker { color: var(--color-pink-darker) !important; }
+.text-pink-darkest { color: var(--color-pink-darkest) !important; }
+
+.background-grape-lightest { background-color: var(--color-grape-lightest) !important; }
+.background-grape-lighter { background-color: var(--color-grape-lighter) !important; }
+.background-grape-light { background-color: var(--color-grape-light) !important; }
+.background-grape { background-color: var(--color-grape) !important; }
+.background-grape-dark { background-color: var(--color-grape-dark) !important; }
+.background-grape-darker {  background-color: var(--color-grape-darker) !important; }
+.background-grape-darkest { background-color: var(--color-grape-darkest) !important; }
+
+.text-grape-lightest { color: var(--color-grape-lightest) !important; }
+.text-grape-lighter { color: var(--color-grape-lighter) !important; }
+.text-grape-light { color: var(--color-grape-light) !important; }
+.text-grape { color: var(--color-grape) !important; }
+.text-grape-dark { color: var(--color-grape-dark) !important; }
+.text-grape-darker { color: var(--color-grape-darker) !important; }
+.text-grape-darkest { color: var(--color-grape-darkest) !important; }
+
+.background-violet-lightest { background-color: var(--color-violet-lightest) !important; }
+.background-violet-lighter { background-color: var(--color-violet-lighter) !important; }
+.background-violet-light { background-color: var(--color-violet-light) !important; }
+.background-violet { background-color: var(--color-violet) !important; }
+.background-violet-dark { background-color: var(--color-violet-dark) !important; }
+.background-violet-darker { background-color: var(--color-violet-darker) !important; }
+.background-violet-darkest { background-color: var(--color-violet-darkest) !important; }
+
+.text-violet-lightest { color: var(--color-violet-lightest) !important; }
+.text-violet-lighter { color: var(--color-violet-lighter) !important; }
+.text-violet-light { color: var(--color-violet-light) !important; }
+.text-violet { color: var(--color-violet) !important; }
+.text-violet-dark { color: var(--color-violet-dark) !important; }
+.text-violet-darker { color: var(--color-violet-darker) !important; }
+.text-violet-darkest { color: var(--color-violet-darkest) !important; }
+
+.background-indigo-lightest { background-color: var(--color-indigo-lightest) !important; }
+.background-indigo-lighter { background-color: var(--color-indigo-lighter) !important; }
+.background-indigo-light { background-color: var(--color-indigo-light) !important; }
+.background-indigo { background-color: var(--color-indigo) !important; }
+.background-indigo-dark { background-color: var(--color-indigo-dark) !important; }
+.background-indigo-darker { background-color: var(--color-indigo-darker) !important; }
+.background-indigo-darkest { background-color: var(--color-indigo-darkest) !important; }
+
+.text-indigo-lightest { color: var(--color-indigo-lightest) !important; }
+.text-indigo-lighter { color: var(--color-indigo-lighter) !important; }
+.text-indigo-light { color: var(--color-indigo-light) !important; }
+.text-indigo { color: var(--color-indigo) !important; }
+.text-indigo-dark { color: var(--color-indigo-dark) !important; }
+.text-indigo-darker { color: var(--color-indigo-darker) !important; }
+.text-indigo-darkest { color: var(--color-indigo-darkest) !important; }
+
+.background-blue-lightest { background-color: var(--color-blue-lightest) !important; }
+.background-blue-lighter { background-color: var(--color-blue-lighter) !important; }
+.background-blue-light { background-color: var(--color-blue-light) !important; }
+.background-blue { background-color: var(--color-blue) !important; }
+.background-blue-dark { background-color: var(--color-blue-dark) !important; }
+.background-blue-darker { background-color: var(--color-blue-darker) !important; }
+.background-blue-darkest { background-color: var(--color-blue-darkest) !important; }
+
+.text-blue-lightest { color: var(--color-blue-lightest) !important; }
+.text-blue-lighter { color: var(--color-blue-lighter) !important; }
+.text-blue-light { color: var(--color-blue-light) !important; }
+.text-blue { color: var(--color-blue) !important; }
+.text-blue-dark { color: var(--color-blue-dark) !important; }
+.text-blue-darker {color: var(--color-blue-darker) !important; }
+.text-blue-darkest { color: var(--color-blue-darkest) !important; }
+
+.background-cyan-lightest { background-color: var(--color-cyan-lightest) !important; }
+.background-cyan-lighter { background-color: var(--color-cyan-lighter) !important; }
+.background-cyan-light { background-color: var(--color-cyan-light) !important; }
+.background-cyan { background-color: var(--color-cyan) !important; }
+.background-cyan-dark { background-color: var(--color-cyan-dark) !important; }
+.background-cyan-darker { background-color: var(--color-cyan-darker) !important; }
+.background-cyan-darkest { background-color: var(--color-cyan-darkest) !important; }
+
+.text-cyan-lightest { color: var(--color-cyan-lightest) !important; }
+.text-cyan-lighter { color: var(--color-cyan-lighter) !important; }
+.text-cyan-light { color: var(--color-cyan-light) !important; }
+.text-cyan { color: var(--color-cyan) !important; }
+.text-cyan-dark { color: var(--color-cyan-dark) !important; }
+.text-cyan-darker { color: var(--color-cyan-darker) !important; }
+.text-cyan-darkest { color: var(--color-cyan-darkest) !important; }
+
+.background-teal-lightest { background-color: var(--color-teal-lightest) !important; }
+.background-teal-lighter { background-color: var(--color-teal-lighter) !important; }
+.background-teal-light { background-color: var(--color-teal-light) !important; }
+.background-teal { background-color: var(--color-teal) !important; }
+.background-teal-dark { background-color: var(--color-teal-dark) !important; }
+.background-teal-darker { background-color: var(--color-teal-darker) !important; }
+.background-teal-darkest { background-color: var(--color-teal-darkest) !important; }
+
+.text-teal-lightest { color: var(--color-teal-lightest) !important; }
+.text-teal-lighter { color: var(--color-teal-lighter) !important; }
+.text-teal-light { color: var(--color-teal-light) !important; }
+.text-teal { color: var(--color-teal) !important; }
+.text-teal-dark { color: var(--color-teal-dark) !important; }
+.text-teal-darker { color: var(--color-teal-darker) !important; }
+.text-teal-darkest { color: var(--color-teal-darkest) !important; }
+
+.background-green-lightest { background-color: var(--color-green-lightest) !important; }
+.background-green-lighter { background-color: var(--color-green-lighter) !important; }
+.background-green-light { background-color: var(--color-green-light) !important; }
+.background-green { background-color: var(--color-green) !important; }
+.background-green-dark { background-color: var(--color-green-dark) !important; } 
+.background-green-darker { background-color: var(--color-green-darker) !important; }
+.background-green-darkest { background-color: var(--color-green-darkest) !important; }
+
+.text-green-lightest { color: var(--color-green-lightest) !important; }
+.text-green-lighter { color: var(--color-green-lighter) !important; } 
+.text-green-light { color: var(--color-green-light) !important; }
+.text-green { color: var(--color-green) !important; }
+.text-green-dark { color: var(--color-green-dark) !important; }
+.text-green-darker { color: var(--color-green-darker) !important; }
+.text-green-darkest { color: var(--color-green-darkest) !important; }
+
+.background-lime-lightest { background-color: var(--color-lime-lightest) !important; }
+.background-lime-lighter { background-color: var(--color-lime-lighter) !important; }
+.background-lime-light { background-color: var(--color-lime-light) !important; }
+.background-lime { background-color: var(--color-lime) !important; }
+.background-lime-dark { background-color: var(--color-lime-dark) !important; }
+.background-lime-darker { background-color: var(--color-lime-darker) !important; }
+.background-lime-darkest { background-color: var(--color-lime-darkest) !important; }
+
+.text-lime-lightest { color: var(--color-lime-lightest) !important; }
+.text-lime-lighter { color: var(--color-lime-lighter) !important; }
+.text-lime-light { color: var(--color-lime-light) !important; }
+.text-lime { color: var(--color-lime) !important; }
+.text-lime-dark { color: var(--color-lime-dark) !important; }
+.text-lime-darker { color: var(--color-lime-darker) !important; }
+.text-lime-darkest { color: var(--color-lime-darkest) !important; }
+
+.background-yellow-lightest { background-color: var(--color-yellow-lightest) !important; }
+.background-yellow-lighter { background-color: var(--color-yellow-lighter) !important; }
+.background-yellow-light { background-color: var(--color-yellow-light) !important; }
+.background-yellow { background-color: var(--color-yellow) !important; }
+.background-yellow-dark { background-color: var(--color-yellow-dark) !important; }
+.background-yellow-darker { background-color: var(--color-yellow-darker) !important; }
+.background-yellow-darkest { background-color: var(--color-yellow-darkest) !important; }
+
+.text-yellow-lightest { color: var(--color-yellow-lightest) !important; }
+.text-yellow-lighter { color: var(--color-yellow-lighter) !important; }
+.text-yellow-light { color: var(--color-yellow-light) !important; }
+.text-yellow { color: var(--color-yellow) !important; }
+.text-yellow-dark { color: var(--color-yellow-dark) !important; }
+.text-yellow-darker { color: var(--color-yellow-darker) !important; }
+.text-yellow-darkest { color: var(--color-yellow-darkest) !important; }
+
+.background-orange-lightest { background-color: var(--color-orange-lightest) !important; }
+.background-orange-lighter { background-color: var(--color-orange-lighter) !important; }
+.background-orange-light { background-color: var(--color-orange-light) !important; }
+.background-orange { background-color: var(--color-orange) !important; }
+.background-orange-dark { background-color: var(--color-orange-dark) !important; }
+.background-orange-darker { background-color: var(--color-orange-darker) !important; }
+.background-orange-darkest { background-color: var(--color-orange-darkest) !important; }
+
+.text-orange-lightest { color: var(--color-orange-lightest) !important; }
+.text-orange-lighter { color: var(--color-orange-lighter) !important; }
+.text-orange-light { color: var(--color-orange-light) !important; }
+.text-orange { color: var(--color-orange) !important; }
+.text-orange-dark { color: var(--color-orange-dark) !important; }
+.text-orange-darker { color: var(--color-orange-darker) !important; }
+.text-orange-darkest { color: var(--color-orange-darkest) !important; }
+
+
+// $6.2.3 - Styles - Colors - Neutral 
+.background-transparent { background-color: transparent !important; }
+.background-neutral-0 {background-color: var(--color-neutral-0) !important;}
+.background-neutral-1 { background-color: var(--color-neutral-1) !important; }
+.background-neutral-2 { background-color: var(--color-neutral-2) !important; }
+.background-neutral-3 { background-color: var(--color-neutral-3) !important; }
+.background-neutral-4 { background-color: var(--color-neutral-4) !important; }
+.background-neutral-5 { background-color: var(--color-neutral-5) !important; }
+.background-neutral-6 { background-color: var(--color-neutral-6) !important; }
+.background-neutral-7 { background-color: var(--color-neutral-7) !important; }
+.background-neutral-8 { background-color: var(--color-neutral-8) !important; }
+.background-neutral-9 { background-color: var(--color-neutral-9) !important; }
+.background-neutral-10 { background-color: var(--color-neutral-10) !important; }
+
+.text-neutral-0 { color: var(--color-neutral-0) !important; }
+.text-neutral-1 { color: var(--color-neutral-1) !important; }
+.text-neutral-2 { color: var(--color-neutral-2) !important; }
+.text-neutral-3 { color: var(--color-neutral-3) !important; }
+.text-neutral-4 { color: var(--color-neutral-4) !important; }
+.text-neutral-5 { color: var(--color-neutral-5) !important; }
+.text-neutral-6 { color: var(--color-neutral-6) !important; }
+.text-neutral-7 { color: var(--color-neutral-7) !important; }
+.text-neutral-8 { color: var(--color-neutral-8) !important; }
+.text-neutral-9 { color: var(--color-neutral-9) !important; }
+.text-neutral-10 { color: var(--color-neutral-10) !important; }
+
+// Background and Text Colors used when IsLight parameter for Badge / Tag / UserInitials is True 
+.background-neutral-0-lightest,
+.background-neutral-1-lightest,
+.background-neutral-2-lightest,
+.background-neutral-3-lightest,
+.background-neutral-4-lightest {
+    background-color: var(--color-neutral-9) !important;  
+}
+
+.background-neutral-5-lightest,
+.background-neutral-6-lightest,
+.background-neutral-7-lightest,
+.background-neutral-8-lightest,
+.background-neutral-9-lightest,
+.background-neutral-10-lightest {
+    background-color: var(--color-neutral-0) !important;
+}
+
+.text-neutral-5-darker { color: var(--color-neutral-5) !important; }
+.text-neutral-6-darker { color: var(--color-neutral-6) !important; }
+.text-neutral-7-darker { color: var(--color-neutral-7) !important; }
+.text-neutral-8-darker { color: var(--color-neutral-8) !important; }
+.text-neutral-9-darker { color: var(--color-neutral-9) !important; }
+.text-neutral-10-darker { color: var(--color-neutral-10) !important; }
+
+// Background Transparent when used in IE11 to be more specific than CSSVars Polyfill 
+.ie11 .background-transparent { background-color: transparent !important; }
+
+
+// $6.2.4 - Styles - Colors - Semantic 
+.background-error-light { background-color: var(--color-error-light) !important; }
+.background-error { background-color: var(--color-error) !important; }
+
+.text-error-light { color: var(--color-error-light) !important; }
+.text-error { color: var(--color-error) !important; }
+
+.background-warning-light { background-color: var(--color-warning-light) !important; }
+.background-warning { background-color: var(--color-warning) !important; }
+
+.text-warning-light { color: var(--color-warning-light) !important; }
+.text-warning { color: var(--color-warning) !important; }
+
+.background-success-light { background-color: var(--color-success-light) !important; }
+.background-success { background-color: var(--color-success) !important; }
+
+.text-success-light { color: var(--color-success-light) !important; }
+.text-success { color: var(--color-success) !important; }
+
+.background-info-light { background-color: var(--color-info-light) !important; }
+.background-info { background-color: var(--color-info) !important; }
+
+.text-info-light { color: var(--color-info-light) !important; }
+.text-info { color: var(--color-info) !important; }

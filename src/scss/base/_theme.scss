@@ -1,0 +1,27 @@
+:root{
+    --font-family: 'Nunito';
+
+    // Color - Brand
+     --color-primary: #00AAAD;
+     --color-primary-darken: #BF3E96;
+     --color-primary-hover: #333;
+     --color-primary-selected: rgba(20, 110, 245, .12);
+     --color-primary-lightest: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9));
+
+     --color-secondary: #F9A01B;
+     --color-secondary-darken: #6FCBDC;
+
+     --color-white-0: #FFFFFF;
+     --color-white-1: #FAFAFA;
+     --color-white-2: #F3F3F3;
+     --color-white-3: #F7FAFA;
+
+     --color-black-0: #000;
+     --color-black-1: #50555C;
+     --color-black-2: #616161;
+
+     // Color - Navbar
+     --color-navbar: var(--color-black-1);
+     --color-navbar--hover: var(--color-primary);
+}
+

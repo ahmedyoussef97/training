@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Janna LT';
+    src: url('#{$font-path}/JannaLT-Bold.eot');
+    src: url('#{$font-path}/JannaLT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}/JannaLT-Bold.woff2') format('woff2'),
+        url('#{$font-path}/JannaLT-Bold.woff') format('woff'),
+        url('#{$font-path}/JannaLT-Bold.ttf') format('truetype'),
+        url('#{$font-path}/JannaLT-Bold.svg#JannaLT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Janna LT';
+    src: url('#{$font-path}/JannaLT-Regular.eot');
+    src: url('#{$font-path}/JannaLT-Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}/JannaLT-Regular.woff2') format('woff2'),
+        url('#{$font-path}/JannaLT-Regular.woff') format('woff'),
+        url('#{$font-path}/JannaLT-Regular.ttf') format('truetype'),
+        url('#{$font-path}/JannaLT-Regular.svg#JannaLT-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

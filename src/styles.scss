@@ -1,0 +1,36 @@
+
+
+
+@import "./scss/vendors/bootstrap/functions";
+@import "./scss/base/variables.en";
+@import "./scss/base/variables";
+@import "./scss/base/variables.ar";
+@import "./scss/base/theme";
+@import "./scss/vendors/bootstrap/variables";
+@import "./scss/base/mixins";
+@import "./scss/vendors/bootstrap/mixins";
+@import "./scss/base/angular-theme";
+@import "./scss/base/material-icons";
+@import "./scss/base/fonts";
+@import "./scss/base/reset";
+@import "./scss/utilities/accessibility";
+@import "./scss/base/typography";
+@import "./scss/utilities/colors";
+@import "./scss/utilities/spacing";
+@import "./scss/utilities/borders";
+@import "./scss/utilities/elevations";
+@import "./scss/vendors/bootstrap/utilities";
+@import "./scss/vendors/bootstrap/grid";
+
+// header and footer
+@import "./scss/layouts/header";
+@import "./scss/modules/brand";
+@import "./scss/modules/navbar";
+@import "./scss/layouts/footer";
+
+// modules
+@import "./scss/modules/social-icons";
+@import "./scss/modules/cards";
+@import "./scss/modules/header";
+@import "./scss/modules/buttons";
+@import "./scss/modules/forms";
