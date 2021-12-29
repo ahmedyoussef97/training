@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditFormComponent } from '../edit-form/edit-form.component';
 
 export interface PeriodicElement {
   name: string;
@@ -31,15 +33,17 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AdminComponent implements OnInit {
   postId: number | undefined;
-  displayedColumns: string[] = ['setting', 'name', 'email', 'job', 'gender', 'totalGoals', 'totalKpis'];
+  displayedColumns: string[] = ['name', 'email', 'job', 'gender', 'totalGoals', 'totalKpis', 'setting',];
   dataSource = ELEMENT_DATA;
-  constructor(private http: HttpClient) { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    const headers = { 'Authorization': 'Bearer my-token', 'My-Custom-Header': 'foobar' };
-    const body = { title: 'Angular POST Request Example' };
-    this.http.post<any>('https://reqres.in/api/posts', body, { headers }).subscribe(data => {
-      this.postId = data.id;
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(EditFormComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 

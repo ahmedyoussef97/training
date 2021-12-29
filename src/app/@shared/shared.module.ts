@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { InnerContentComponent } from './inner-content/inner-content.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginFormComponent,
     AdminComponent,
     InnerContentComponent,
+    EditFormComponent,
   ],
   imports: [
     CommonModule,
