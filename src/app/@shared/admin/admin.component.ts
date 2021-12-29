@@ -1,29 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { GetDataService } from '@app/service/get-data.service';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 
 export interface PeriodicElement {
-  name: string;
-  job: string;
-  email: string;
-  gender: string;
-  totalGoals: number;
-  totalKpis: number;
+  CatName: string;
+  Created: number;
+  CreatedBy: string;
+  Id: number;
+  ImageURL: number;
+  SouraId: number;
+  Updated: number;
+  UpdatedBy: string;
   setting: any;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 11, totalKpis: 212, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 2, totalKpis: 2212, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 444, totalKpis: 23312, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 444, totalKpis: 21, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 231, totalKpis: 212, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 22, totalKpis: 212, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 2, totalKpis: 930, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 2, totalKpis: 223, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 33, totalKpis: 44, setting: '' },
-  { name: 'ahmed', email: 'ahmed@example.com', gender: 'male', job: 'teacher', totalGoals: 2, totalKpis: 215552, setting: '' },
 ];
 
 @Component({
@@ -33,9 +26,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AdminComponent implements OnInit {
   postId: number | undefined;
-  displayedColumns: string[] = ['name', 'email', 'job', 'gender', 'totalGoals', 'totalKpis', 'setting',];
+  displayedColumns: string[] = ['CatName', 'Created', 'CreatedBy', 'Id', 'ImageURL', 'SouraId', 'Updated', 'UpdatedBy', 'setting'];
   dataSource = ELEMENT_DATA;
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public data: GetDataService) {
+    this.data.getAll().subscribe((res) => {
+      console.log(res);
+
+      this.dataSource = res.data
+
+      console.log(this.dataSource);
+
+
+    })
+  }
 
   ngOnInit() {
   }

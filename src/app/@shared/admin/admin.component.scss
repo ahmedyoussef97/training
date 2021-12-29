@@ -1,16 +1,16 @@
-.table {
-  table.mat-table {
-    width: 100%;
-    margin-right: auto;
-  }
-  th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
-    text-align: left;
-  }
-  .table-header {
-    font-size: 16px;
-  }
+table {
+  width: 100%;
+}
+img{
+  width: 20px;
+  height: 20px;
 }
 
 .setting-text {
-  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
 }
