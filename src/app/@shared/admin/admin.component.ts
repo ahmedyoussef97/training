@@ -30,20 +30,23 @@ export class AdminComponent implements OnInit {
   postId: number | undefined;
   displayedColumns: string[] = ['CatName', 'Created', 'CreatedBy', 'Id', 'ImageURL', 'SouraId', 'Updated', 'UpdatedBy', 'setting'];
   dataSource = ELEMENT_DATA;
-  constructor(public dialog: MatDialog, public data: GetDataService) {
-    this.data.getAll().subscribe((res) => {
-      console.log(res);
-
+  constructor(public _GetDataService: GetDataService, public dialog: MatDialog) {
+  }
+  getAllData() {
+    this._GetDataService.getAll().subscribe((res) => {
       this.dataSource = res.data
-
-      console.log(this.dataSource);
-
-
     })
   }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getAllData();
+    this._GetDataService.refresh$.subscribe((res: Boolean) => {
+      if (res) {
+        this.getAllData()
+      }
+    });
   }
+
+
   addItem() {
     const dialogRef = this.dialog.open(AddCategoryComponent);
 

@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditFormComponent } from './edit-form/edit-form.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { DeleteFormComponent } from './delete-form/delete-form.component';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { DeleteFormComponent } from './delete-form/delete-form.component';
     EditFormComponent,
     AddCategoryComponent,
     DeleteFormComponent,
+    SnackBarComponent,
   ],
   imports: [
     CommonModule,

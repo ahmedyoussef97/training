@@ -44,7 +44,6 @@ export class AddCategoryComponent implements OnInit {
   onSubmit() {
     this._GetDataService.addArticle(this.data).subscribe((res) => {
       console.log(res);
-
     })
   }
 
