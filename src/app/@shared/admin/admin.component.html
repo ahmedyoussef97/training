@@ -1,5 +1,5 @@
 <div class="container">
-  <button mat-flat-button color="primary" class="pl-2">
+  <button mat-flat-button color="primary" class="pl-2" (click)="addItem()">
     <mat-icon>add</mat-icon>
     <span>New Category</span>
   </button>
@@ -54,13 +54,13 @@
             {{element.setting }}
           </button>
           <mat-menu #menu="matMenu">
-            <button class="d-flex align-items-center" mat-menu-item (click)="openDialog()">
+            <button class="d-flex align-items-center" mat-menu-item>
               <span class="setting-text">edit</span>
               <span class="material-icons">
                 edit
               </span>
             </button>
-            <button class="d-flex align-items-center" mat-menu-item>
+            <button class="d-flex align-items-center" mat-menu-item (click)="deleteItem(element.Id, element.CatName)">
               <span class="setting-text">delete</span>
               <span class="material-icons">
                 delete

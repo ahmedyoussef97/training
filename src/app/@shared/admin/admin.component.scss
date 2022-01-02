@@ -1,10 +1,6 @@
 table {
   width: 100%;
 }
-img{
-  width: 20px;
-  height: 20px;
-}
 
 .setting-text {
   margin-right: 10px;
@@ -13,4 +9,5 @@ img{
 .img {
   width: 30px;
   height: 30px;
+  object-fit: cover;
 }

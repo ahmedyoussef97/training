@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GetDataService } from '@app/service/get-data.service';
+import { AddCategoryComponent } from '../add-category/add-category.component';
+import { DeleteFormComponent } from '../delete-form/delete-form.component';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 
 export interface PeriodicElement {
@@ -42,12 +44,35 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
   }
-  openDialog() {
+  addItem() {
+    const dialogRef = this.dialog.open(AddCategoryComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  editItem() {
     const dialogRef = this.dialog.open(EditFormComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
   }
+
+  deleteItem(Id: number, CatName: string): void {
+    const dialogRef = this.dialog.open(DeleteFormComponent, {
+      width: '50%',
+      data: {
+        id: Id,
+        catName: CatName,
+      },
+    });
+  }
+
+  // editnum(num: number) {
+  //   console.log(num);
+
+  // }
 
 }

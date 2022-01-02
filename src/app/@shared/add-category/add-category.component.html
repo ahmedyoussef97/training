@@ -1,0 +1,16 @@
+<div class="dialog">
+  <img src="" alt="">
+  <form #Form="ngForm" class="signin-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="CatName" name="CatName" #CatName="ngModel"
+        [(ngModel)]="data.CatName" />
+    </div>
+  </form>
+  <mat-dialog-actions align="between">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close (click)=" onSubmit()" class="form-control btn btn-primary submit px-3">
+      Add
+    </button>
+  </mat-dialog-actions>
+
+</div>

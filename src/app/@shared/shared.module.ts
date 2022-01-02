@@ -14,6 +14,8 @@ import { InnerContentComponent } from './inner-content/inner-content.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { DeleteFormComponent } from './delete-form/delete-form.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     AdminComponent,
     InnerContentComponent,
     EditFormComponent,
+    AddCategoryComponent,
+    DeleteFormComponent,
   ],
   imports: [
     CommonModule,
