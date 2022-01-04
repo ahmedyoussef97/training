@@ -12,6 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class DeleteFormComponent implements OnInit {
   durationInSeconds = 5;
+  done: any;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, public _GetDataService: GetDataService, private _snackBar: MatSnackBar) { }
 
@@ -21,9 +22,17 @@ export class DeleteFormComponent implements OnInit {
   sure() {
     this._GetDataService.delArtical(this.data.id).subscribe((res: any) => {
       console.log(res);
-    });
+      this.done = res.message;
+      if (res.message == "تم الحذف بنجاح") {
+        this.openSnackBar()
+      }
+    })
+  }
+
+  openSnackBar() {
     this._snackBar.openFromComponent(SnackBarComponent, {
       duration: this.durationInSeconds * 1000,
+      data: this.done
     });
   }
 

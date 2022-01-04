@@ -1,9 +1,10 @@
 <div class="dialog">
   <img src="" alt="">
   <h1>Edit Item</h1>
+  <input type="text" class="form-control" name="CatName" #CatName="ngModel" [(ngModel)]="article.CatName" />
   <mat-dialog-actions align="between">
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button mat-dialog-close class="form-control btn btn-primary submit px-3">
+    <button mat-button mat-dialog-close class="form-control btn btn-primary submit px-3" (click)="sure()">
       Save
     </button>
   </mat-dialog-actions>

@@ -54,7 +54,7 @@
             {{element.setting }}
           </button>
           <mat-menu #menu="matMenu">
-            <button class="d-flex align-items-center" mat-menu-item>
+            <button class="d-flex align-items-center" mat-menu-item (click)="editItem(element)">
               <span class="setting-text">edit</span>
               <span class="material-icons">
                 edit

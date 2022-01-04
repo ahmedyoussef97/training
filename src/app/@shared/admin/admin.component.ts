@@ -55,9 +55,11 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  editItem() {
-    const dialogRef = this.dialog.open(EditFormComponent);
-
+  editItem(data: any): void {
+    const dialogRef = this.dialog.open(EditFormComponent, {
+      width: '300px',
+      data
+    });
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
@@ -65,7 +67,7 @@ export class AdminComponent implements OnInit {
 
   deleteItem(Id: number, CatName: string): void {
     const dialogRef = this.dialog.open(DeleteFormComponent, {
-      width: '50%',
+      width: '300px',
       data: {
         id: Id,
         catName: CatName,
