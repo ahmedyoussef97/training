@@ -7,28 +7,39 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class GetDataService {
-  refresh$: BehaviorSubject<Boolean> = new BehaviorSubject<Boolean>(false);
-  isloading: Boolean = false
+  isloading$: BehaviorSubject<Boolean> = new BehaviorSubject<Boolean>(false);
+  adminList$: BehaviorSubject<any> = new BehaviorSubject([]);
+
   constructor(private _HttpClient: HttpClient) { }
-  getAll(): Observable<any> {
-    this.isloading = true;
-    return this._HttpClient.get('http://135.181.95.148:1000/api/Articles/GetAll').pipe(tap(() => {
-      this.isloading = false
-    }));
+
+  getAll() {
+    this.isloading$.next(true)
+    this._HttpClient.get('http://135.181.95.148:1000/api/Articles/GetAll').subscribe((res: any) => {
+      this.adminList$.next(res.data)
+      this.isloading$.next(false)
+    });
   }
   addArticle(article: any) {
     return this._HttpClient.post('http://135.181.95.148:1000/api/Articles/Add', article).pipe(tap(() => {
-      this.refresh$.next(true)
+      this.getAll()
     }));
   }
+
   delArtical(id: any) {
     return this._HttpClient.delete(`http://135.181.95.148:1000//api/Articles/Delete/${id}/1`).pipe(tap(() => {
-      this.refresh$.next(true)
+      this.getAll()
     }));
   }
+
+  // editArtical(id:any){
+  //   return this._HttpClient.get(`http://135.181.95.148:1000//api/Articles/GetById/${id}`).pipe(tap(()=>{
+  //     this.refresh$.next(true)
+  //   }));
+  // }
+
   updateArticle(article: any) {
     return this._HttpClient.post('http://135.181.95.148:1000/api/Articles/Update', article).pipe(tap(() => {
-      this.refresh$.next(true)
+      this.getAll()
     }));
   }
 }

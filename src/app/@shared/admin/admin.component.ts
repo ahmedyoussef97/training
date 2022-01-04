@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GetDataService } from '@app/service/get-data.service';
+import { Subscription } from 'rxjs';
 import { AddCategoryComponent } from '../add-category/add-category.component';
 import { DeleteFormComponent } from '../delete-form/delete-form.component';
 import { EditFormComponent } from '../edit-form/edit-form.component';
@@ -30,20 +30,14 @@ export class AdminComponent implements OnInit {
   postId: number | undefined;
   displayedColumns: string[] = ['CatName', 'Created', 'CreatedBy', 'Id', 'ImageURL', 'SouraId', 'Updated', 'UpdatedBy', 'setting'];
   dataSource = ELEMENT_DATA;
+  subscriptions: Subscription[] = [];
   constructor(public _GetDataService: GetDataService, public dialog: MatDialog) {
   }
-  getAllData() {
-    this._GetDataService.getAll().subscribe((res) => {
-      this.dataSource = res.data
-    })
-  }
   ngOnInit(): void {
-    this.getAllData();
-    this._GetDataService.refresh$.subscribe((res: Boolean) => {
-      if (res) {
-        this.getAllData()
-      }
-    });
+    this._GetDataService.getAll();
+    const dataSub = this._GetDataService.adminList$.subscribe(res => this.dataSource = res)
+    this.subscriptions.push(dataSub);
+
   }
 
 
@@ -75,9 +69,7 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  // editnum(num: number) {
-  //   console.log(num);
-
-  // }
-
+  ngOnDestroy(): void {
+    this.subscriptions.map(sub => sub.unsubscribe())
+  }
 }
