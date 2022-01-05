@@ -31,12 +31,6 @@ export class GetDataService {
     }));
   }
 
-  // editArtical(id:any){
-  //   return this._HttpClient.get(`http://135.181.95.148:1000//api/Articles/GetById/${id}`).pipe(tap(()=>{
-  //     this.refresh$.next(true)
-  //   }));
-  // }
-
   updateArticle(article: any) {
     return this._HttpClient.post('http://135.181.95.148:1000/api/Articles/Update', article).pipe(tap(() => {
       this.getAll()

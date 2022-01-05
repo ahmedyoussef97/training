@@ -1,0 +1,56 @@
+<section class="ftco-section padding-top-m">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+          <h2 class="heading-section">Sign Up</h2>
+          <h3 class="mb-4 text-center">Have an account?</h3>
+          <form action="#" class="signin-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>fullname</mat-label>
+              <input matInput type="text" register placeholder="name" name="CatName" #CatName="ngModel"
+                [(ngModel)]="register.FullName" required />
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" register placeholder="email" name="CatName" #CatName="ngModel"
+                [(ngModel)]="register.Email" required />
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Phone</mat-label>
+              <input matInput type="number" register placeholder="Phone" name="CatName" #CatName="ngModel"
+                [(ngModel)]="register.Phone" required />
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput pattern="" required [type]="hide ? 'password' : 'text'" placeholder="Password"
+                name="Password" #Password="ngModel" [(ngModel)]="register.Password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="Password.invalid && (Password.dirty || Password.touched) && Password.errors">
+                <span *ngIf="Password.errors['required']">هذا الحقل مطلوب</span>
+                <span *ngIf="Password.errors['pattern']">يجب ان يكون كلمة المرور تحتوى على حروف وارقام ورموز </span>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>confirm Password</mat-label>
+              <input matInput required minlength="4" [type]="hide ? 'password' : 'text'" placeholder="confirm Password"
+                name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="confirm_password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+            <div class="form-group">
+              <button mat-flat-button color="primary" class="form-control btn btn-primary submit px-3" (click)="sure()">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

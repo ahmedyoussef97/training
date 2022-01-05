@@ -43,14 +43,15 @@ import { LoadingComponent } from './loading/loading.component';
     ReactiveFormsModule,
     MaterialModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
   ],
 
   exports: [
     MaterialModule,
     HeaderComponent,
     AdminComponent,
-    InnerContentComponent
+    InnerContentComponent,
+    RegisterFormComponent
   ],
   providers: [HttpService],
   entryComponents: [
