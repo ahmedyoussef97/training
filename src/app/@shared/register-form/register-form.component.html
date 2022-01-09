@@ -3,23 +3,30 @@
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-4">
         <div class="login-wrap p-0">
-          <h2 class="heading-section">Sign Up</h2>
-          <h3 class="mb-4 text-center">Have an account?</h3>
-          <form action="#" class="signin-form">
+          <h2 class="heading-section text-center">Sign Up</h2>
+          <form #form="ngForm" action="#" class="signin-form">
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>fullname</mat-label>
-              <input matInput type="text" register placeholder="name" name="CatName" #CatName="ngModel"
-                [(ngModel)]="register.FullName" required />
+              <input matInput required type="text" placeholder="FullName" name="FullName" #FullName="ngModel"
+                [(ngModel)]="register.FullName" />
+              <mat-error *ngIf="FullName.invalid && (FullName.dirty || FullName.touched) && FullName.errors">
+                <span *ngIf="FullName.errors['required']">هذا الحقل مطلوب</span>
+                <span *ngIf="FullName.errors['pattern']">ادخل بريد الكتروني صحيح</span>
+              </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Email</mat-label>
-              <input matInput type="email" register placeholder="email" name="CatName" #CatName="ngModel"
-                [(ngModel)]="register.Email" required />
+              <input matInput required type="text" placeholder="Email" name="Email" #Email="ngModel"
+                [(ngModel)]="register.Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$" />
+              <mat-error *ngIf="Email.invalid && (Email.dirty || Email.touched) && Email.errors">
+                <span *ngIf="Email.errors['required']">هذا الحقل مطلوب</span>
+                <span *ngIf="Email.errors['pattern']">ادخل بريد الكتروني صحيح</span>
+              </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Phone</mat-label>
-              <input matInput type="number" register placeholder="Phone" name="CatName" #CatName="ngModel"
-                [(ngModel)]="register.Phone" required />
+              <input matInput required type="text" placeholder="Phone" name="Phone" #Phone="ngModel"
+                [(ngModel)]="register.Phone" />
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Password</mat-label>
@@ -37,14 +44,20 @@
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>confirm Password</mat-label>
               <input matInput required minlength="4" [type]="hide ? 'password' : 'text'" placeholder="confirm Password"
-                name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="confirm_password">
+                name="confirmPassword" #ConfirmPassword="ngModel" [(ngModel)]="confirmPassword" (focusout)="match()">
               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>
+              <mat-error
+                *ngIf="ConfirmPassword.invalid && (ConfirmPassword.dirty || ConfirmPassword.touched) && ConfirmPassword.errors">
+                <span *ngIf="ConfirmPassword.errors['required']">هذا الحقل مطلوب</span>
+                <span *ngIf="! isMatch">كلمة السر ليست مطابقة</span>
+              </mat-error>
             </mat-form-field>
             <div class="form-group">
-              <button mat-flat-button color="primary" class="form-control btn btn-primary submit px-3" (click)="sure()">
+              <button mat-flat-button color="primary" class="form-control btn btn-primary submit px-3"
+                (click)="sure(form)">
                 Sign Up
               </button>
             </div>
