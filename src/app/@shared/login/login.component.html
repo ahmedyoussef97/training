@@ -1,0 +1,42 @@
+<section class="ftco-section padding-top-m">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+          <h2 class="heading-section text-center">Sign In</h2>
+          <form #login="ngForm" class="signUp-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput required type="text" placeholder="Email" name="Email" #Email="ngModel"
+                [(ngModel)]="loginData.username" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$" />
+              <mat-error *ngIf="Email.invalid && (Email.dirty || Email.touched) && Email.errors">
+                <span *ngIf="Email.errors['required']">هذا الحقل مطلوب</span>
+                <span *ngIf="Email.errors['pattern']">ادخل بريد الكتروني صحيح</span>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput pattern="" required [type]="hide ? 'password' : 'text'" placeholder="Password"
+                name="Password" #Password="ngModel" [(ngModel)]="loginData.Password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="Password.invalid && (Password.dirty || Password.touched) && Password.errors">
+                <span *ngIf="Password.errors['required']">هذا الحقل مطلوب</span>
+                <span *ngIf="Password.errors['pattern']">يجب ان يكون كلمة المرور تحتوى على حروف وارقام ورموز </span>
+              </mat-error>
+            </mat-form-field>
+            <div class="form-group">
+              <button mat-flat-button color="primary" class="form-control btn btn-primary submit px-3"
+                (click)="sure(login)">
+                Sign In
+              </button>
+            </div>
+            <h2>{{error}}</h2>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

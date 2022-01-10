@@ -18,6 +18,7 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { DeleteFormComponent } from './delete-form/delete-form.component';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { LoadingComponent } from './loading/loading.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { LoadingComponent } from './loading/loading.component';
     DeleteFormComponent,
     SnackBarComponent,
     LoadingComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
