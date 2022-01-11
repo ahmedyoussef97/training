@@ -12,13 +12,14 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { AdminComponent } from './admin/admin.component';
 import { InnerContentComponent } from './inner-content/inner-content.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { EditFormComponent } from './edit-form/edit-form.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { DeleteFormComponent } from './delete-form/delete-form.component';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { LoadingComponent } from './loading/loading.component';
 import { LoginComponent } from './login/login.component';
+import { AuthInterceptor } from '@app/interceptor/auth.interceptor';
 
 
 @NgModule({
@@ -55,7 +56,13 @@ import { LoginComponent } from './login/login.component';
     InnerContentComponent,
     RegisterFormComponent
   ],
-  providers: [HttpService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   entryComponents: [
 
   ],

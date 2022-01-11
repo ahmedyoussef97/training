@@ -1,20 +1,23 @@
 <div class="menu">
+  <mat-toolbar class="topbar">
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>notes</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      <mat-icon class="mr-1">account_circle</mat-icon>
+      <span class="margin-x-s">{{userName}}</span>
+    </button>
+    <mat-menu #userMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item routerLink="/login">Logout</button>
+    </mat-menu>
+  </mat-toolbar>
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <a routerLink="/admin" mat-button class="button--block" (click)="drawer.toggle()">Admin</a>
-      <!-- <a routerLink="/categories" mat-button class="button--block" (click)="drawer.toggle()">Categories</a> -->
-      <!-- <a routerLink="/kpis" mat-button class="button--block" (click)="drawer.toggle()">Kpis</a> -->
       <a routerLink="/register" mat-button class="button--block" (click)="drawer.toggle()">Register</a>
       <a routerLink="/login" mat-button class="button--block" (click)="drawer.toggle()">login</a>
     </mat-drawer>
-
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        <span class="material-icons">
-          menu
-        </span>
-      </button>
-    </div>
-
   </mat-drawer-container>
 </div>
